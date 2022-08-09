@@ -48,7 +48,7 @@ const createProduct = asyncHandler(async (req, res) => {
 // @route   GET /api/products
 // @access  Private
 const getProducts = asyncHandler(async (req, res) => {
-  const products = await Product.find({ product: req.product.id });
+  const products = await Product.find();
   res.status(200).json(products);
 });
 

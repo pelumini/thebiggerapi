@@ -2,9 +2,6 @@ const mongoose = require('mongoose');
 
 const productSchema = mongoose.Schema(
   {
-    id: {
-      type: String,
-    },
     name: {
       type: String,
       required: [true, 'Please add a name'],

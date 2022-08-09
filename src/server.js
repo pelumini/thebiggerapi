@@ -12,6 +12,9 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
+app.get('/api/test', (req, res) => {
+  res.status(200).json({ message: 'Welcome to the API' });
+});
 app.use('/api/goals', require('./routes/goalRoutes'));
 app.use('/api/auth', require('./routes/userRoutes'));
 app.use('/api/products', require('./routes/productRoutes'));

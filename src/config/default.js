@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   origin: ['http://localhost:3000', 'https://thebiggerapi.herokuapp.com'],
   dbUri: `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.mfnqe.azure.mongodb.net/backend`,
   saltWorkFactor: 10,

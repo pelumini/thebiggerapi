@@ -12,7 +12,7 @@ const createProduct = asyncHandler(async (req, res) => {
     res.status(400);
     throw new Error('Please add all fields');
   }
-  const productExists = await User.findOne({ name });
+  const productExists = await Product.findOne({ name });
   if (productExists) {
     res.status(400);
     throw new Error('Product already exists');
@@ -48,7 +48,7 @@ const createProduct = asyncHandler(async (req, res) => {
 // @route   GET /api/products
 // @access  Private
 const getProducts = asyncHandler(async (req, res) => {
-  const products = await Product.find({ user: req.user.id });
+  const products = await Product.find({ product: req.product.id });
   res.status(200).json(products);
 });
 

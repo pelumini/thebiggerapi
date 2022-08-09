@@ -55,7 +55,7 @@ const getProducts = asyncHandler(async (req, res) => {
 // @desc    Set product
 // @route   POST /api/product
 // @access  Private
-const getProduct = asyncHandler(async (req, res) => {
+const setProduct = asyncHandler(async (req, res) => {
   if (!req.body.text) {
     res.status(400);
     throw new Error('Please add a text field');
@@ -120,7 +120,7 @@ const deleteProduct = asyncHandler(async (req, res) => {
 module.exports = {
   createProduct,
   getProducts,
-  getProduct,
+  setProduct,
   updateProduct,
   deleteProduct,
 };
